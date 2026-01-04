@@ -136,7 +136,36 @@ double complex COSH(double complex z)
     double complex res=ReCOSH(re,im)+ImCOSH(re,im)*I;
     return res;
 }
-
+long double complex Esin(double complex z)
+{
+    double complex iz=-cimag(z)+creal(z)*I;
+    double complex res = (cexp(iz)-cexp(-iz))/(2*I);
+    return res;
+}
+double complex Ecos(double complex z)
+{
+    double complex iz=-cimag(z)+creal(z)*I;
+    double complex res = (cexp(iz)+cexp(-iz))/(2);
+    return res;
+}
+double complex Esinh(double complex z)
+{
+    double complex res_1=cexp(z);
+    double complex res_2=cexp(-z);
+    /*printf("%.5f + %.5fi\n", creal(res_1), cimag(res_1));
+    printf("%.5f + %.5fi\n", creal(res_2), cimag(res_2));*/
+    double complex res = (res_1-res_2)/2.0;
+    return res;
+}
+double complex Ecosh(double complex z)
+{
+    double complex res_1=cexp(z);
+    double complex res_2=cexp(-z);
+    /*printf("%.5f + %.5fi\n", creal(res_1), cimag(res_1));
+    printf("%.5f + %.5fi\n", creal(res_2), cimag(res_2));*/
+    double complex res = (res_1+res_2)/2.0;
+    return res;
+}
 int main()
 {
     char *locale = setlocale(LC_ALL, "");
