@@ -178,7 +178,7 @@ int main()
     z = real + imag * I;
 
     printf("Комплексное число: %.2f + %.2fi\n", creal(z), cimag(z));
-    double complex res = COS(z);
+    /*double complex res = COS(z);
     double complex res_2 = SIN(z);
     double complex res_3 = COSH(z);
     double complex res_4 = SINH(z);
@@ -189,6 +189,28 @@ int main()
     printf("%.5f + %.5fi\n", creal(ccos(z)), cimag(ccos(z)));
     printf("%.5f + %.5fi\n", creal(csin(z)), cimag(csin(z)));
     printf("%.5f + %.5fi\n", creal(ccosh(z)), cimag(ccosh(z)));
-    printf("%.5f + %.5fi\n", creal(csinh(z)), cimag(csinh(z)));
+    printf("%.5f + %.5fi\n", creal(csinh(z)), cimag(csinh(z)));*/
+    double complex res = COS(z);
+    double complex res_res=Ecos(z);
+    double complex res_2 = SIN(z);
+    long double complex res_2_1=Esin(z);
+    double complex res_3 = COSH(z);
+    double complex res_3_1 = Ecosh(z);
+    double complex res_4 = SINH(z);
+    double complex res_4_1=Esinh(z);
+    printf("COS %.5f + %.5fi\n", creal(res), cimag(res));
+    printf("ecos %.5f + %.5fi\n", creal(res_res), cimag(res_res));
+    printf("SIN %.5f + %.5fi\n", creal(res_2), cimag(res_2));
+    printf("Esin %.5f + %.5fi\n", creal(res_2_1), cimag(res_2_1));
+    printf("COSH %.5f + %.5fi\n", creal(res_3), cimag(res_3));
+    printf("ecosh %.5f + %.5fi\n", creal(res_3_1), cimag(res_3_1));
+    printf("SINH %.5f + %.5fi\n", creal(res_4), cimag(res_4));
+    printf("esinh %.5f + %.5fi\n", creal(res_4_1), cimag(res_4_1));
+    printf("COS %.5f + %.5fi\n", creal(ccos(z)), cimag(ccos(z)));
+    printf("SIN %.5f + %.5fi\n", creal(csin(z)), cimag(csin(z)));
+    printf("COSH %.5f + %.5fi\n", creal(ccosh(z)), cimag(ccosh(z)));
+    printf("SINH %.5f + %.5fi\n", creal(csinh(z)), cimag(csinh(z)));
+    printf("real_imag exp %.5f + %.5fi\n", creal(cexp(z)), cimag(cexp(z)));
+    printf("real_imag exp %.5f + %.5fi\n", creal(cexp(-z)), cimag(cexp(-z)));
     return 0;
 }
