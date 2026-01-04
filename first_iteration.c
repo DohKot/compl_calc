@@ -166,6 +166,27 @@ double complex Ecosh(double complex z)
     double complex res = (res_1+res_2)/2.0;
     return res;
 }
+double complex TANH(double complex z)
+{
+    double complex res = SINH(z)/COSH(z);
+    return res;
+}
+double complex TAN(double complex z)
+{
+
+    double complex res = SIN(z)/COS(z);
+    return res;
+}
+double complex CTG(ouble complex z)
+{
+    double complex res = COS(z)/SIN(z);
+    return res;
+}
+double complex CTH(double complex z)
+{
+    double complez res = COSH(z)/SINH(z);
+    return res;
+}
 int main()
 {
     char *locale = setlocale(LC_ALL, "");
